@@ -43,6 +43,7 @@
     "lint": "standard",
     "fix": "standard --fix",
     "test": "nyc --reporter=html --reporter=text mocha test/unit",
+    "test-iast": "nyc --reporter=html --reporter=text mocha --require ./agent_linux64.node test/unit",
     "e2e": "nyc --reporter=text mocha test/e2e --slow=15000 --timeout=30000",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
