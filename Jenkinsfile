@@ -17,7 +17,7 @@ pipeline {
           // 2.	Download the IAST Agent into the project workspace. 
           sh 'curl -sSL https://s3.us-east-2.amazonaws.com/app.veracode-iast.io/iast-ci.sh |  sh'
           // 3.	Run the tests with the Veracode Interactive Agent attached. 
-          sh 'LD_LIBRARY_PATH=$PWD npm test-iast'
+          sh 'LD_LIBRARY_PATH=$PWD npm run test-iast'
         }
       }
     }
